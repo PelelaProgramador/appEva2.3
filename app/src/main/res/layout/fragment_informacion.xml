@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Informacion">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imagenInsana"
+            android:layout_width="202dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="84dp"
+            android:src="@drawable/hbidon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Botón "Información Personal" con imagen -->
+
+        <!-- Botón "Cupones" con imagen -->
+
+        <!-- Botón "Ayuda en Línea" con imagen -->
+
+        <TextView
+            android:id="@+id/nombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="84dp"
+            android:text="Nombre de Usuario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toEndOf="@+id/imagenInsana"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mostrarCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="Correo Electrónico"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagenInsana"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.162" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnEliminar"
+            android:onClick="eliminarCuenta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.808" />
+
+        <ImageButton
+            android:id="@+id/btnInformacionPersonal"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_marginBottom="28dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/infopersonal"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@+id/infopersonal"
+            app:layout_constraintEnd_toStartOf="@+id/btnCupones"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenInsana"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/btnCupones"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="28dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/coupon"
+            app:layout_constraintBottom_toTopOf="@+id/cupones"
+            app:layout_constraintEnd_toStartOf="@+id/btnAyudaEnLinea"
+            app:layout_constraintHorizontal_bias="0.994"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenInsana"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/btnAyudaEnLinea"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="28dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ayudaenlinea"
+            app:layout_constraintBottom_toTopOf="@+id/ayudaenlinea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenInsana"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/infopersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="60dp"
+            android:text="Información Personal"
+            app:layout_constraintBottom_toTopOf="@+id/btnEliminar"
+            app:layout_constraintEnd_toStartOf="@+id/cupones"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/cupones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:text="Cupones"
+            app:layout_constraintBottom_toTopOf="@+id/btnEliminar"
+            app:layout_constraintEnd_toStartOf="@+id/ayudaenlinea"
+            app:layout_constraintStart_toEndOf="@+id/infopersonal" />
+
+        <TextView
+            android:id="@+id/ayudaenlinea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="60dp"
+            android:text="Ayuda en linea"
+            app:layout_constraintBottom_toTopOf="@+id/btnEliminar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cupones" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+
+

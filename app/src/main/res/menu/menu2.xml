@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/op4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/reservas" />
+    <item
+        android:id="@+id/op5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/pedidos" />
+    <item
+        android:id="@+id/op6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/configuracion" />
+    <item
+        android:id="@+id/op7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/logout" />
+</menu>
