@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,27 @@ public class vista extends AppCompatActivity {
             }
         });
 
+        // Botón "Información" en tu actividad actual (vista.java)
+        ImageButton btnInformacion = findViewById(R.id.btnInformacion);
+        btnInformacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Recuperar el nombre y la imagen de la empresa de la actividad actual
+                String nombreEmpresa = getIntent().getStringExtra("nombreEmpresa");
+                int imagenEmpresa = getIntent().getIntExtra("imagenEmpresa", 0);
+
+                // Crear un Intent para abrir la nueva actividad (EmpresaInformacion)
+                Intent infoIntent = new Intent(vista.this, EmpresaInformacion.class);
+
+                // Pasa los datos necesarios a través del Intent
+                infoIntent.putExtra("nombreEmpresa", nombreEmpresa);
+                infoIntent.putExtra("imagenEmpresa", imagenEmpresa);
+
+                // Inicia la nueva actividad
+                startActivity(infoIntent);
+            }
+        });
+
         // Botón para ver detalles del producto
         Button botonVerProducto = findViewById(R.id.button5);
         botonVerProducto.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +64,26 @@ public class vista extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // Botón "Opiniones"
+        ImageButton btnOpiniones = findViewById(R.id.btnOpiniones);
+        btnOpiniones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para abrir la vista de opiniones (EmpresaOpiniones)
+                Intent opinionesIntent = new Intent(vista.this, EmpresaOpiniones.class);
 
+                // Recuperar el nombre y la imagen de la empresa de la actividad actual
+                String nombreEmpresa = getIntent().getStringExtra("nombreEmpresa");
+                int imagenEmpresa = getIntent().getIntExtra("imagenEmpresa", 0);
+
+                // Pasa los datos necesarios a través del Intent
+                opinionesIntent.putExtra("nombreEmpresa", nombreEmpresa);
+                opinionesIntent.putExtra("imagenEmpresa", imagenEmpresa);
+
+                // Inicia la vista de opiniones
+                startActivity(opinionesIntent);
+            }
+        });
 
         // Recuperar los datos de la empresa del Intent
         Intent intent = getIntent();
@@ -90,5 +131,6 @@ public class vista extends AppCompatActivity {
         }
     }
 }
+
 
 

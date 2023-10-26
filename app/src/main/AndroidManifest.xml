@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Capsulas"
         tools:targetApi="31">
         <activity
+            android:name=".EmpresaOpiniones"
+            android:exported="false" />
+        <activity
+            android:name=".EmpresaInformacion"
+            android:exported="false" />
+        <activity
             android:name=".AyudaPedidos"
             android:exported="false" />
         <activity

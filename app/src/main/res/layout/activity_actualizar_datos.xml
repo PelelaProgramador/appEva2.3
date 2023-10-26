@@ -9,6 +9,12 @@
     android:padding="16dp"
     tools:context=".ActualizarDatos">
 
+    <Button
+        android:id="@+id/btnRetroceder"
+        android:layout_width="134dp"
+        android:layout_height="65dp"
+        android:text="Retroceder" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
@@ -91,9 +97,4 @@
         android:layout_height="wrap_content"
         android:text="Actualizar Datos" />
 
-    <Button
-        android:id="@+id/btnRetroceder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Retroceder" />
 </LinearLayout>

@@ -9,63 +9,115 @@
         android:id="@+id/botonRetrocederDetalles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="7dp"
         android:text="Retroceder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imagenEmpresa"
-        android:layout_width="142dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="32dp"
-        android:scaleType="centerCrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="17dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/nombreEmpresa"
         app:layout_constraintEnd_toStartOf="@+id/nombreEmpresa"
-        app:layout_constraintHorizontal_bias="0.427"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonRetrocederDetalles" />
+        app:layout_constraintStart_toStartOf="@+id/imagenProducto"
+        app:layout_constraintTop_toTopOf="@+id/btnInformacion" />
 
     <TextView
         android:id="@+id/nombreEmpresa"
-        android:layout_width="137dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="143dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btnInformacion" />
 
     <TextView
         android:id="@+id/productos"
-        android:layout_width="181dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreEmpresa" />
+        android:layout_width="156dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView32"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imagenProducto"
-        android:layout_width="142dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/productos"
-        app:layout_constraintHorizontal_bias="0.428"
+        android:layout_width="175dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/productos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenEmpresa" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="164dp"
         android:text="Ver Producto"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnInformacion"
+        android:layout_width="60dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="52dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/nombreEmpresa"
+        app:layout_constraintStart_toEndOf="@+id/imagenEmpresa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconoinformcion" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="304dp"
+        android:text="Más Vendidos"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/imagenProducto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Hoy * 11:00 a 22:30 hs"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnOpiniones"
+        android:layout_width="60dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="72dp"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.816"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productos"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/btnInformacion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
